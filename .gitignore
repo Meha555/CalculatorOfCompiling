@@ -1,0 +1,8 @@
+# Qt
+*.pro.user
+
+# C/C++
+*.o
+
+# Other
+*.exe

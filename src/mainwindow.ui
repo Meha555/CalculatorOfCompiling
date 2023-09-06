@@ -1,0 +1,1015 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>916</width>
+    <height>591</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>200</width>
+    <height>100</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>编译原理计算器 by 黄祯彦</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res.qrc">
+    <normaloff>:/images/images/logo.ico</normaloff>:/images/images/logo.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="font">
+       <font>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="title">
+       <string>计算器</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QWidget" name="layoutWidget">
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <widget class="QLineEdit" name="lineEdit">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>90</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL SemiBold</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="dragEnabled">
+              <bool>false</bool>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+             <property name="clearButtonEnabled">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_pre">
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #fdfd9b, stop:1 #eded1d);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ffdc8a, stop:1 #fba716);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ffe591, stop:1 #ffc400);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/images/pre.png</normaloff>:/images/images/pre.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="shortcut">
+              <string>Ctrl+Z</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string/>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="btn_log">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>log</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QPushButton" name="btn_ln">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>ln</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="btn_pi">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>PI</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="btn_e">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>e</string>
+             </property>
+             <property name="shortcut">
+              <string>E</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QPushButton" name="btn_mod">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #b3d6ff, stop:1 #57cdff);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #c9f9fc, stop:1 #83f0f8);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #9ecbff, stop:1 #1f88ff);
+}</string>
+             </property>
+             <property name="text">
+              <string>MOD</string>
+             </property>
+             <property name="shortcut">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QPushButton" name="btn_sin">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>sin</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QPushButton" name="btn_lp">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>(</string>
+             </property>
+             <property name="shortcut">
+              <string>(</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QPushButton" name="btn_rp">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>)</string>
+             </property>
+             <property name="shortcut">
+              <string>)</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QPushButton" name="btn_back">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ffaed6, stop:1 #f958d3);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ffc9fa, stop:1 #ff94f4);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ff75ba, stop:1 #f91fc6);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="res.qrc">
+               <normaloff>:/images/images/backspace.png</normaloff>:/images/images/backspace.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>35</width>
+               <height>35</height>
+              </size>
+             </property>
+             <property name="shortcut">
+              <string>Backspace</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="4">
+            <widget class="QPushButton" name="btn_div">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #b3d6ff, stop:1 #57cdff);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #c9f9fc, stop:1 #83f0f8);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #9ecbff, stop:1 #1f88ff);
+}</string>
+             </property>
+             <property name="text">
+              <string>/</string>
+             </property>
+             <property name="shortcut">
+              <string>/</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QPushButton" name="btn_cos">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>cos</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QPushButton" name="btn_7">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>7</string>
+             </property>
+             <property name="shortcut">
+              <string>7</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="btn_8">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>8</string>
+             </property>
+             <property name="shortcut">
+              <string>8</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QPushButton" name="btn_9">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>9</string>
+             </property>
+             <property name="shortcut">
+              <string>9</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="4">
+            <widget class="QPushButton" name="btn_mul">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #b3d6ff, stop:1 #57cdff);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #c9f9fc, stop:1 #83f0f8);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #9ecbff, stop:1 #1f88ff);
+}</string>
+             </property>
+             <property name="text">
+              <string>*</string>
+             </property>
+             <property name="shortcut">
+              <string>*</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="btn_tan">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>tan</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="btn_4">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>4</string>
+             </property>
+             <property name="shortcut">
+              <string>4</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="2">
+            <widget class="QPushButton" name="btn_5">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>5</string>
+             </property>
+             <property name="shortcut">
+              <string>5</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="3">
+            <widget class="QPushButton" name="btn_6">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>6</string>
+             </property>
+             <property name="shortcut">
+              <string>6</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="4">
+            <widget class="QPushButton" name="btn_minus">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #b3d6ff, stop:1 #57cdff);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #c9f9fc, stop:1 #83f0f8);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #9ecbff, stop:1 #1f88ff);
+}</string>
+             </property>
+             <property name="text">
+              <string>-</string>
+             </property>
+             <property name="shortcut">
+              <string>-</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QPushButton" name="btn_pow">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>pow</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QPushButton" name="btn_1">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>1</string>
+             </property>
+             <property name="shortcut">
+              <string>1</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QPushButton" name="btn_2">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>2</string>
+             </property>
+             <property name="shortcut">
+              <string>2</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QPushButton" name="btn_3">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>3</string>
+             </property>
+             <property name="shortcut">
+              <string>3</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="4">
+            <widget class="QPushButton" name="btn_plus">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #b3d6ff, stop:1 #57cdff);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #c9f9fc, stop:1 #83f0f8);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #9ecbff, stop:1 #1f88ff);
+}</string>
+             </property>
+             <property name="text">
+              <string>+</string>
+             </property>
+             <property name="shortcut">
+              <string>+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QPushButton" name="btn_sqrt">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>sqrt</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QPushButton" name="btn_clear">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #fbae8a, stop:1 #f96b58);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #fff7a3, stop:1 #f58636);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #ff9b6d, stop:1 #ff712f);
+}</string>
+             </property>
+             <property name="text">
+              <string>CE</string>
+             </property>
+             <property name="shortcut">
+              <string>C</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="2">
+            <widget class="QPushButton" name="btn_0">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+             <property name="shortcut">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="3">
+            <widget class="QPushButton" name="btn_dot">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>.</string>
+             </property>
+             <property name="shortcut">
+              <string>.</string>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="4">
+            <widget class="QPushButton" name="btn_eq">
+             <property name="font">
+              <font>
+               <family>JetBrains Mono NL Medium</family>
+               <pointsize>16</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">.QPushButton {
+    border-style: none;
+    border: 1px solid #C0DCF2;
+    color: #386487;
+    padding: 5px;
+    min-height: 15px;
+    border-radius: 5px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #b4ee9b, stop:1 #1ded35);
+}
+
+.QPushButton:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #eafbc3, stop:1 #65e96c);
+}
+
+.QPushButton:pressed {
+    border-style: inset;
+    padding-left: 8px;
+    padding-top: 8px;
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 #b2ff91, stop:1 #36ac03);
+}</string>
+             </property>
+             <property name="text">
+              <string>=</string>
+             </property>
+             <property name="shortcut">
+              <string>=</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>916</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>读取公式 / 保存公式</string>
+    </property>
+    <addaction name="actOpenFile"/>
+    <addaction name="actSaveFile"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>「分析」窗体设置</string>
+    </property>
+    <addaction name="actDockFloat"/>
+    <addaction name="actDockVisible"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="font">
+    <font>
+     <family>JetBrains Mono</family>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
+   <property name="windowTitle">
+    <string>分析</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>2</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents">
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox_5">
+       <property name="title">
+        <string>波兰式（前缀表达式）</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="pExpress">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_3">
+       <property name="title">
+        <string>逆波兰式（后缀表达式）</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QLineEdit" name="rExpress">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="dragEnabled">
+           <bool>false</bool>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="groupBox_4">
+       <property name="title">
+        <string>三地址码</string>
+       </property>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>274</width>
+             <height>314</height>
+            </rect>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="1" column="0">
+             <widget class="QPlainTextEdit" name="plainTextEdit">
+              <property name="font">
+               <font>
+                <pointsize>12</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="readOnly">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actOpenFile">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/images/open.bmp</normaloff>:/images/images/open.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件</string>
+   </property>
+   <property name="toolTip">
+    <string>打开文件</string>
+   </property>
+  </action>
+  <action name="actSaveFile">
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/images/save.bmp</normaloff>:/images/images/save.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>保存文件</string>
+   </property>
+   <property name="toolTip">
+    <string>保存文件</string>
+   </property>
+  </action>
+  <action name="actDockFloat">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/images/lock.bmp</normaloff>:/images/images/lock.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>窗体浮动</string>
+   </property>
+   <property name="toolTip">
+    <string>窗体浮动</string>
+   </property>
+  </action>
+  <action name="actDockVisible">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="res.qrc">
+     <normaloff>:/images/images/visable.bmp</normaloff>:/images/images/visable.bmp</iconset>
+   </property>
+   <property name="text">
+    <string>窗体可见</string>
+   </property>
+   <property name="toolTip">
+    <string>窗体可见</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="res.qrc"/>
+ </resources>
+ <connections/>
+</ui>

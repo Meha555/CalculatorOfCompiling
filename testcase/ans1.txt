@@ -1,0 +1,15 @@
+算式：
+12*log(100)*3+cos(0)-ln(pow(e)) = 71
+波兰式（前缀表达式）：
+- + * * 12 log 100 3 cos 0 ln pow e 
+逆波兰式（后缀表达式）：
+12 100 log * 3 * 0 cos + e pow ln - 
+三地址码：
+(log, 100, null, T1)
+(*, 12, T1, T2)
+(*, T2, 3, T3)
+(cos, 0, null, T4)
+(+, T3, T4, T5)
+(pow, e, null, T6)
+(ln, T6, null, T7)
+(-, T5, T7, T8)

@@ -1,0 +1,14 @@
+算式：
+PI-3.14+log(10)*ln(sqrt(pow(e))) = 1.00159
+波兰式（前缀表达式）：
++ - PI 3.14 * log 10 ln sqrt pow e 
+逆波兰式（后缀表达式）：
+PI 3.14 - 10 log e pow sqrt ln * + 
+三地址码：
+(-, PI, 3.14, T1)
+(log, 10, null, T2)
+(pow, e, null, T3)
+(sqrt, T3, null, T4)
+(ln, T4, null, T5)
+(*, T2, T5, T6)
+(+, T1, T6, T7)
